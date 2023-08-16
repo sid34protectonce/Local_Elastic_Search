@@ -83,11 +83,14 @@ class CURD {
 
   async getOneCollection(recordNumber: number) {
     try {
-      const response = await axios.get(this.baseUrl + recordNumber, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios.get(
+        this.baseUrl + recordNumber,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       console.log("Record:", response.data);
     } catch (error) {
@@ -97,13 +100,13 @@ class CURD {
 
   async getAll() {
     try {
-      const response = await axios.get(this.baseUrl + "_search", {
+      const response = await axios.get(this.baseUrl + "_search" , {
         headers: {
           "Content-Type": "application/json",
         },
       });
 
-      console.log("All records:", response.data.hits);
+      console.log("All records:", response.data);
     } catch (error) {
       console.error(error);
     }
@@ -113,7 +116,7 @@ class CURD {
 const crud = new CURD();
 // crud.createIndex();
 // crud.addRecords(4); // Change the record number as needed
-// crud.getOneCollection(2); // Change the record number as needed
+//crud.getOneCollection(1); // Change the record number as needed
 // crud.updateRecords(2); // Change the record number as needed
 //crud.deleteRecords(2); // Change the record number as needed
 crud.getAll();

@@ -186,7 +186,7 @@ var CURD = /** @class */ (function () {
                             })];
                     case 1:
                         response = _a.sent();
-                        console.log("All records:", response.data.hits);
+                        console.log("All records:", response.data);
                         return [3 /*break*/, 3];
                     case 2:
                         error_6 = _a.sent();
@@ -202,7 +202,7 @@ var CURD = /** @class */ (function () {
 var crud = new CURD();
 // crud.createIndex();
 // crud.addRecords(4); // Change the record number as needed
-// crud.getOneCollection(2); // Change the record number as needed
+//crud.getOneCollection(1); // Change the record number as needed
 // crud.updateRecords(2); // Change the record number as needed
 //crud.deleteRecords(2); // Change the record number as needed
 crud.getAll();
