@@ -119,4 +119,4 @@ const crud = new CURD();
 //crud.getOneCollection(1); // Change the record number as needed
 // crud.updateRecords(2); // Change the record number as needed
 //crud.deleteRecords(2); // Change the record number as needed
-crud.getAll();
+// crud.getAll();
